@@ -17,9 +17,10 @@ document.getElementById('nameForm').addEventListener('submit', function(e) {
   function displayRandomNames(names) {
     const outputElement = document.getElementById('randomNames');
     outputElement.innerHTML = '<p>Random Order:</p><ol>';
-    names.forEach(name => {
-      outputElement.innerHTML += `<li>${name}</li>`;
+    names.forEach((name, index) => {
+        outputElement.innerHTML += `<li>${index + 1}. ${name}</li>`;
     });
     outputElement.innerHTML += '</ol>';
-  }
+}
+
   
